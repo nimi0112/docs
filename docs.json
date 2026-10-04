@@ -1,0 +1,68 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "Paperlink AI",
+  "theme": "almond",
+  "colors": {
+    "primary": "#f59e0b",
+    "light": "#fccf76"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "account-setup"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/how-it-works",
+              "concepts/knowledge-base",
+              "concepts/ai-assistant",
+              "concepts/analytics"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/uploading-documents",
+              "guides/training-your-bot",
+              "guides/embed-chat-widget",
+              "guides/managing-multiple-bots",
+              "guides/customizing-appearance"
+            ]
+          },
+          {
+            "group": "Plans & Billing",
+            "pages": [
+              "billing/plans",
+              "billing/managing-subscription"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "help/faq",
+              "help/troubleshooting",
+              "help/contact-support"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Get Started Free",
+      "href": "https://pl-dev-web.nimishnandwana.workers.dev/sign-up"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+---
+title: "Create and Manage Multiple AI Bots in Paperlink AI"
+sidebarTitle: "Multiple Bots"
+description: "Learn how to create, configure, and manage multiple AI bots in Paperlink AI — each with its own knowledge base, appearance, and embed code."
+---
+
+A single Paperlink AI bot works well for one focused use case, but most growing businesses quickly find they need more than one. Your customer support team has different documentation than your sales team. Your e-commerce site in English needs a separate knowledge base from your Spanish-language storefront. Your HR portal answers employee questions that have nothing to do with the product help center on your main site. Multiple bots let you give each audience exactly the right knowledge base, appearance, and behavior — all managed from a single dashboard. This guide covers everything you need to create, organize, and maintain a fleet of bots.
+
+## Bot Limits by Plan
+
+The number of bots you can create depends on your current plan. Each bot has its own independent knowledge base, embed code, appearance settings, and analytics.
+
+<CardGroup cols={3}>
+  <Card title="Starter" icon="seedling" href="/billing/plans">
+    **1 bot**
+
+    Up to 500 knowledge pages, 3,000 replies/mo, 2 team seats
+  </Card>
+  <Card title="Growth" icon="chart-line" href="/billing/plans">
+    **3 bots**
+
+    Up to 5,000 knowledge pages, 10,000 replies/mo, 5 team seats
+  </Card>
+  <Card title="Scale" icon="rocket" href="/billing/plans">
+    **10 bots**
+
+    Up to 25,000 knowledge pages, 40,000 replies/mo, 15 team seats
+  </Card>
+</CardGroup>
+
+All plans include unlimited sites per bot, real-time analytics, RAG-powered AI, and a 99.9% uptime SLA.
+
+## Creating a New Bot
+
+<Steps>
+  <Step title="Open the dashboard">
+    Sign in to your Paperlink AI account and go to the main **Dashboard**. Your existing bots are listed here with their status and activity summary.
+  </Step>
+  <Step title="Click 'New Bot'">
+    Select the **New Bot** button in the top-right corner of the dashboard. If you've reached your plan's bot limit, you'll be prompted to upgrade before proceeding.
+  </Step>
+  <Step title="Name and describe your bot">
+    Give your bot a clear internal name that identifies its purpose — for example, "Customer Support EN", "Sales FAQ", or "HR Portal Bot". This name appears in your dashboard navigation and is not shown to end users unless you set it as the display name in appearance settings.
+  </Step>
+  <Step title="Configure initial settings">
+    Choose a starting position (bottom-right or bottom-left) and theme (light, dark, or auto). You can adjust all appearance settings in detail later from **Bot Settings → Appearance**.
+  </Step>
+  <Step title="Add documents to the knowledge base">
+    Navigate to the **Knowledge Base** tab for your new bot and upload the documents that should power it. The bot won't answer questions until at least one document has been processed. See [Uploading Documents](/guides/uploading-documents) for best practices.
+  </Step>
+  <Step title="Copy the embed snippet and go live">
+    Once your knowledge base is ready, go to **Bot Settings → Embed**, copy your snippet, and paste it into the target site. Each bot has a unique embed code — don't mix snippets between bots.
+  </Step>
+</Steps>
+
+## Switching Between Bots
+
+The dashboard's **bot selector** appears in the top navigation bar. Click the bot name currently shown to open a dropdown listing all your bots. Select any bot to switch your dashboard view — knowledge base, analytics, settings, and embed code all update to reflect the selected bot. Changes you make in the dashboard only affect the bot currently selected.
+
+## Copying a Bot
+
+If you want to create a new bot that shares a similar knowledge base or configuration as an existing one, you can duplicate it rather than starting from scratch:
+
+1. Open the bot you want to copy in the dashboard.
+2. Go to **Bot Settings → General**.
+3. Click **Duplicate Bot** and give the copy a new name.
+
+The duplicate gets its own knowledge base (with the same documents copied over), its own embed code, and its own analytics — completely independent of the original. Updates to one bot do not affect the other. This is useful when launching a new language version, a new department bot, or a staging bot for testing changes before deploying them to production.
+
+## Deleting a Bot
+
+<Warning>
+  **Deleting a bot is permanent and cannot be undone.** When you delete a bot, its entire knowledge base, all analytics history, and its embed code are destroyed immediately. Any pages still running the bot's embed snippet will show a broken widget. Before deleting, make sure you've removed the embed snippet from all sites where it was installed, and that you've exported or noted any analytics data you want to keep.
+</Warning>
+
+To delete a bot:
+
+1. Open the bot in the dashboard.
+2. Go to **Bot Settings → General**.
+3. Scroll to the **Danger Zone** section and click **Delete Bot**.
+4. Type the bot's name to confirm, then click **Delete permanently**.
+
+## Upgrading for More Bots
+
+If you've reached your plan's bot limit, you need to upgrade to create additional bots. Your existing bots, their knowledge bases, and their analytics are preserved when you upgrade — upgrading simply unlocks the ability to create more.
+
+To upgrade, visit [Billing & Plans](/billing/plans) or click the **Upgrade** prompt that appears when you attempt to create a bot beyond your current limit. Changes take effect immediately after payment, so you can create new bots right away.

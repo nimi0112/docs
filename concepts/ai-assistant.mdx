@@ -1,0 +1,88 @@
+---
+title: "How Your Paperlink AI Assistant Works for Customers"
+sidebarTitle: "AI Assistant"
+description: "Discover how the Paperlink AI assistant handles visitor questions, generates structured answers, and integrates into your site as an embedded chat widget."
+---
+
+The Paperlink AI assistant is what your website visitors interact with directly. From their perspective, it's a familiar chat interface that appears on your site and answers questions instantly — no forms to fill out, no wait queues, no hunting through documentation. Behind that simple experience is a RAG-powered engine searching your documents in real time, retrieving the right information, and returning a clear answer in under two seconds. This page explains how the assistant behaves, what it's capable of, and how it fits into your customer experience.
+
+## The Chat Widget
+
+When you embed Paperlink AI on your website, a chat widget appears in the corner of your page — typically the bottom right. Visitors click to open it and start asking questions immediately, without any login or setup on their end.
+
+The widget is added to your site with a single code snippet that you copy from your bot's **Embed** settings. Once added, the widget loads asynchronously, so it never slows down your page. You can configure the widget's name, greeting message, and accent color to match your brand.
+
+The widget is fully responsive and works across desktop, tablet, and mobile browsers without any additional configuration.
+
+## How Answers Are Structured
+
+Paperlink AI does not paste raw paragraphs from your documents into the chat window. Instead, it synthesizes the relevant information into a clear, direct response formatted for conversational reading. Answers are concise, actionable, and written in plain language — even when the source document uses technical or legal terminology.
+
+Every response is generated in **under two seconds** from the moment a visitor submits their question. That speed ensures the experience feels immediate rather than transactional, keeping visitors engaged and reducing the likelihood of them abandoning the page to search elsewhere.
+
+Where appropriate, the assistant structures longer answers using bullet points or numbered steps, making complex information easy to scan. Visitors can ask follow-up questions in the same conversation, and the assistant maintains context within the session.
+
+## Handling Unknown Questions
+
+When a visitor asks a question that falls outside your uploaded documents, the assistant does not guess or fabricate an answer. Instead, it responds honestly — letting the visitor know the information isn't available in the current knowledge base — and can optionally direct them to your support team or a contact page.
+
+<CardGroup cols={2}>
+  <Card title="In-Scope Question" icon="circle-check" href="/concepts/knowledge-base">
+    **Visitor:** "What's your return window for online orders?"
+
+    **Assistant:** "You can return online orders within 30 days of delivery for a full refund. Items must be in original condition with the original packaging. To start a return, visit your order history and select 'Return Item.'"
+
+    The assistant retrieves the answer from your returns policy document and presents it clearly.
+  </Card>
+  <Card title="Out-of-Scope Question" icon="circle-exclamation" href="/concepts/knowledge-base">
+    **Visitor:** "What's the weather like in Chicago today?"
+
+    **Assistant:** "I can only answer questions based on the documents available in this knowledge base. For questions outside that scope, please reach out to our support team directly."
+
+    The assistant declines gracefully rather than guessing, preserving trust and accuracy.
+  </Card>
+</CardGroup>
+
+This behavior is intentional. Visitors should always be able to trust the answers they receive. A clear "I don't know" is far more valuable than a confident but incorrect response.
+
+## Multi-Language Support
+
+Paperlink AI supports conversations in multiple languages. Visitors can ask questions in their preferred language, and the assistant will respond in kind — drawing from the same underlying documents regardless of the language the question was asked in.
+
+<Info>
+  Multi-language support works best when your source documents are in English or when you upload translations of your documents for specific languages. The assistant can interpret questions in other languages, but the accuracy of its responses depends on the content available in your knowledge base.
+</Info>
+
+## Bot Limits Per Plan
+
+Each Paperlink AI plan includes a set number of bots you can create and manage simultaneously. A "bot" is a single AI assistant with its own knowledge base, widget, and analytics.
+
+<CardGroup cols={3}>
+  <Card title="Starter" icon="seedling" href="/billing/plans">
+    **1 bot**
+
+    Ideal for a single product line, service, or department. One focused assistant with up to 500 knowledge pages.
+  </Card>
+  <Card title="Growth" icon="chart-line" href="/billing/plans">
+    **3 bots**
+
+    Run separate assistants for different products, regions, or teams — each with its own knowledge base of up to 5,000 pages.
+  </Card>
+  <Card title="Scale" icon="building" href="/billing/plans">
+    **10 bots**
+
+    Deploy across multiple websites, departments, or client accounts, each with up to 25,000 pages of dedicated content.
+  </Card>
+</CardGroup>
+
+Each bot is managed independently from your Paperlink AI dashboard. You can give bots different names, knowledge bases, widget styles, and seat access — making it straightforward to run parallel deployments without interference.
+
+## Always-On Availability
+
+Your Paperlink AI assistant operates 24 hours a day, 7 days a week — including weekends, holidays, and outside your team's working hours. Visitors get answers immediately regardless of when they visit your site.
+
+All plans include a **99.9% uptime SLA**, meaning your assistant is reliably available even during peak traffic periods. There are no maintenance windows that take the widget offline, and infrastructure scaling is handled automatically — you don't need to do anything to prepare for traffic spikes.
+
+<Tip>
+  Use your bot's always-on availability to handle the questions your support team answers repeatedly during off-hours. According to Paperlink AI usage data, bots reduce inbound support tickets by an average of **63%** — and a significant share of those deflections happen outside standard business hours when live agents aren't available.
+</Tip>

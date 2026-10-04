@@ -1,0 +1,109 @@
+---
+title: "Building and Managing Your Paperlink AI Knowledge Base"
+sidebarTitle: "Knowledge Base"
+description: "Learn how Paperlink AI's knowledge base works — what content to include, how pages are counted, and how to keep your documents accurate and up to date."
+---
+
+Your knowledge base is the collection of documents that powers your Paperlink AI bot. Every answer your assistant gives comes directly from the content you upload — so the quality, structure, and completeness of your knowledge base directly determines how helpful your bot is to visitors. This page explains how the knowledge base works, what you can upload, and how to keep it current as your business evolves.
+
+## What Is a Knowledge Base?
+
+In Paperlink AI, a knowledge base is the set of documents attached to a specific bot. Each bot has its own independent knowledge base, which means you can run separate bots for different products, teams, or use cases — each trained on exactly the right content without overlap or confusion.
+
+When a visitor asks your bot a question, the system searches only the documents in that bot's knowledge base. Documents uploaded to one bot are never shared with or searched by another bot, even within the same account.
+
+## Supported File Types
+
+Paperlink AI supports the following document formats:
+
+<CardGroup cols={3}>
+  <Card title="PDF (.pdf)" icon="file-pdf" href="/guides/uploading-documents">
+    The most common format. Works best with text-based PDFs that contain selectable text. Scanned image PDFs without embedded text layers are not recommended.
+  </Card>
+  <Card title="Word Document (.docx)" icon="file-word" href="/guides/uploading-documents">
+    Microsoft Word files with rich formatting, including headings, bullet lists, and tables. Use heading styles (Heading 1, Heading 2) for best results.
+  </Card>
+  <Card title="Plain Text (.txt)" icon="file-lines" href="/guides/uploading-documents">
+    Simple, fast, and reliable. Ideal for FAQs, policy statements, and any content that doesn't require visual formatting.
+  </Card>
+</CardGroup>
+
+<Tip>
+  Structure your documents with clear headings, short paragraphs, and consistent formatting. The AI uses heading hierarchy and paragraph boundaries to identify where one topic ends and another begins — well-organized documents produce more precise, relevant answers. Avoid scanned images, heavily watermarked PDFs, or files where the text is embedded in images rather than the document layer.
+</Tip>
+
+## Knowledge Page Limits
+
+Each pricing plan includes a maximum number of knowledge pages per bot. A "page" is counted as a standard document page — roughly 250–300 words of text content.
+
+<CardGroup cols={3}>
+  <Card title="Starter" icon="seedling" href="/billing/plans">
+    **500 pages per bot**
+
+    Great for focused use cases like a single product manual, a service FAQ, or a concise policy library.
+  </Card>
+  <Card title="Growth" icon="chart-line" href="/billing/plans">
+    **5,000 pages per bot**
+
+    Suitable for comprehensive documentation sets, multi-product catalogs, or combined policy and procedure libraries.
+  </Card>
+  <Card title="Scale" icon="building" href="/billing/plans">
+    **25,000 pages per bot**
+
+    Designed for enterprise-scale knowledge bases — full documentation suites, large contract libraries, and extensive regulatory content.
+  </Card>
+</CardGroup>
+
+If an upload would push a bot over its plan's page limit, Paperlink AI will notify you before completing the upload so you can review your content and decide what to include.
+
+## Organizing Your Content
+
+How you organize content within your documents affects the accuracy of the answers your bot provides. Follow these guidelines to get the best results:
+
+<Accordion title="Use clear, descriptive headings">
+  The AI treats headings as topic signals. A section titled "Cancellation and Refund Policy" will match questions about refunds far more reliably than a section titled "Section 4." Use specific, descriptive language in your headings wherever possible.
+</Accordion>
+
+<Accordion title="Keep related content together">
+  If a topic spans multiple documents, consider consolidating it into a single file. When related information is spread across many short documents, the retrieval system has to piece it together — concentrated content produces more complete answers.
+</Accordion>
+
+<Accordion title="Avoid image-only content">
+  Charts, diagrams, and screenshots do not contribute to your bot's knowledge base unless they contain selectable, machine-readable text. If key information lives in an image, add a text summary of that information in the same document.
+</Accordion>
+
+<Accordion title="Remove outdated content proactively">
+  If a document contains superseded pricing, old product names, or retired policies, remove it from the knowledge base or replace it with an updated version. Outdated content can produce incorrect answers even when newer documents are also present.
+</Accordion>
+
+## Updating Your Knowledge Base
+
+Your knowledge base is not static — you can add, replace, or remove documents at any time from the **Knowledge Base** tab inside your bot's settings.
+
+To add new content, upload additional files through the dashboard. Each new upload is processed and indexed independently, so your existing documents and any live conversations are not interrupted while the new content is ingested. New documents typically become available for answering questions within one to three minutes of upload.
+
+To replace an existing document — for example, when a policy is updated — upload the new version and then delete the old file. Keeping both versions present can cause the bot to return conflicting information, so always remove outdated files after uploading replacements.
+
+<Info>
+  Changes to your knowledge base take effect as soon as the new document finishes processing. There is no need to republish or redeploy your chat widget — the bot automatically uses the latest indexed content for every new conversation.
+</Info>
+
+## Removing Documents
+
+To remove a document from a bot's knowledge base:
+
+<Steps>
+  <Step title="Open Bot Settings">
+    Navigate to your dashboard, select the bot you want to manage, and click the **Knowledge Base** tab.
+  </Step>
+  <Step title="Locate the Document">
+    Find the document you want to remove in the list of uploaded files. You can sort by name, upload date, or page count to locate it quickly.
+  </Step>
+  <Step title="Delete the Document">
+    Click the **Delete** icon next to the document and confirm the removal. The document is immediately removed from the index and will no longer be used to answer questions.
+  </Step>
+</Steps>
+
+<Warning>
+  Deleting a document from a knowledge base is permanent. If you need the content again in the future, you will need to re-upload the file. Always make sure you have a local copy of any document before removing it from Paperlink AI.
+</Warning>

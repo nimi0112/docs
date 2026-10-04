@@ -1,0 +1,104 @@
+---
+title: "Troubleshoot Common Paperlink AI Issues Step by Step"
+sidebarTitle: "Troubleshooting"
+description: "Diagnose and fix common issues with Paperlink AI — including the chat widget not appearing, inaccurate answers, upload failures, and reply limit errors."
+---
+
+Most issues with Paperlink AI can be resolved in a few quick steps. This guide walks you through the most common problems grouped by category — from the chat widget not appearing on your site to bots giving unexpected answers and account access errors. Work through the relevant section before reaching out to support.
+
+## Widget & Embed Issues
+
+<Accordion title="Widget not appearing on my website">
+  If your chat widget isn't showing up after you've added the embed code, check the following:
+
+  1. **Script placement** — make sure the embed script tag is placed just before the closing `</body>` tag in your HTML. Scripts placed in the `<head>` or inside a conditional block may not execute correctly.
+  2. **Bot ID** — verify that the `data-bot-id` attribute in your embed code matches the bot ID shown in your Paperlink AI dashboard. A mismatched or missing ID will prevent the widget from loading.
+  3. **Browser console errors** — open your browser's developer tools (F12 or right-click → Inspect), go to the **Console** tab, and look for any script errors related to Paperlink or your embed code. These messages usually point directly to the cause.
+  4. **Ad blockers** — browser extensions like ad blockers or privacy shields can suppress third-party scripts. Disable them temporarily when testing your embed to rule them out.
+
+  <Tip>
+    After confirming the script is correct, do a hard refresh (Ctrl+Shift+R on Windows, Cmd+Shift+R on Mac) to bypass any cached version of your page.
+  </Tip>
+</Accordion>
+
+<Accordion title="Widget loads slowly">
+  The Paperlink AI embed script loads asynchronously, so it won't block your page from rendering. The first load may take 1–2 seconds depending on the user's connection speed and browser cache state — this is expected behavior.
+
+  If the widget is consistently slow to appear across multiple sessions and devices, it may indicate a network or CDN issue. Contact support at support@paperlink.ai and include the URL of the page where the widget is embedded so the team can investigate.
+</Accordion>
+
+<Accordion title="Widget shows on some pages but not others">
+  If the widget appears on certain pages of your site but not all of them, the embed script is likely placed in a page-specific template rather than your site's global footer.
+
+  - **CMS platforms** (WordPress, Webflow, Squarespace, etc.) — paste the embed code into the global footer or site-wide `<head>` injection field, not into an individual page's settings.
+  - **Custom-coded sites** — confirm the script is included in a shared layout or base template file, not duplicated only on select pages.
+
+  Once the script is in your global template, the widget will appear consistently across your entire site.
+</Accordion>
+
+## Bot & Answer Issues
+
+<Accordion title="Bot gives incorrect or irrelevant answers">
+  If your bot is returning answers that don't match your documents, work through these checks:
+
+  1. **Verify the content exists** — search your uploaded documents for the specific topic or phrase the user asked about. If the content isn't there, the bot has nothing to draw from.
+  2. **Upload missing documents** — add any documents that contain the relevant information, then wait for processing to complete before retesting.
+  3. **Check document quality** — ensure your documents contain extractable text and are not scanned image-only PDFs. Image-based files cannot be read by the AI and will result in low-quality or missing answers.
+  4. **Rephrase the test question** — try asking the same question in different ways. The bot uses semantic search, so slight rephrasing can surface better results.
+</Accordion>
+
+<Accordion title="Bot says it does not know, but the content is in my documents">
+  If your bot responds with "I don't know" or a similar fallback message for a topic that is clearly in one of your uploaded documents, the document may not have been fully processed yet.
+
+  - Go to the **Knowledge Base** section of your bot dashboard and check the status indicator next to each document.
+  - A **green** status means the document has been fully indexed and is available to the bot.
+  - An **orange or pending** status means processing is still in progress — wait a few minutes, then test again.
+
+  If the document shows a green status but the bot still can't answer, try removing and re-uploading the file.
+</Accordion>
+
+<Accordion title="Bot is not using my latest uploaded documents">
+  After you upload new documents, Paperlink AI needs a few minutes to process and index the content before it becomes available to your bot. This is normal.
+
+  Watch for the **green status indicator** next to each document in your Knowledge Base dashboard — this confirms the file has been fully ingested. Avoid testing new content until all uploads show a green status.
+
+  <Warning>
+    If a document has been in a pending or processing state for more than 10 minutes, try deleting it and uploading a fresh copy. If the problem persists, contact support.
+  </Warning>
+</Accordion>
+
+## Account & Billing Issues
+
+<Accordion title="Cannot sign in">
+  If you're unable to sign in to your Paperlink AI account, try the following:
+
+  1. **Password reset** — on the [sign-in page](https://pl-dev-web.nimishnandwana.workers.dev/sign-in), click **Forgot password** and follow the email instructions to reset your credentials.
+  2. **Check your sign-in method** — if you originally signed up using **Sign in with Google** or **Sign in with Microsoft**, you must continue using that same OAuth method. Attempting to sign in with email and password when your account was created via OAuth will fail.
+  3. **Check for typos** — ensure you're using the email address that's registered with your Paperlink AI account. Try copying and pasting instead of typing.
+  4. **Browser issues** — clear your browser cache and cookies, or try signing in from an incognito/private window.
+</Accordion>
+
+<Accordion title="Reply limit reached mid-month">
+  When your bot reaches its monthly reply limit, it stops responding to new questions until your billing cycle resets. To restore service immediately, upgrade your plan from the **Billing** section of your dashboard — your new reply limit takes effect the moment the upgrade is processed.
+
+  | Plan    | Monthly Replies |
+  |---------|----------------|
+  | Starter | 3,000 replies   |
+  | Growth  | 10,000 replies  |
+  | Scale   | 40,000 replies  |
+
+  If you frequently hit your limit before the end of the month, consider moving to the next tier to avoid interruptions.
+</Accordion>
+
+<Accordion title="Documents not uploading">
+  If your file upload is failing or not completing, check the following:
+
+  1. **File format** — Paperlink AI only accepts PDF (`.pdf`), Microsoft Word (`.docx`), and plain text (`.txt`) files. Other formats (e.g., `.xlsx`, `.pptx`, `.png`) are not supported.
+  2. **File size** — very large files may time out during upload. If you have a large PDF, try splitting it into smaller sections before uploading.
+  3. **Upload one file at a time** — bulk uploading many files simultaneously can cause failures. Upload files one at a time if you're experiencing issues.
+  4. **Browser compatibility** — try uploading from a different browser or disabling browser extensions that interfere with file uploads.
+</Accordion>
+
+<Note>
+  If none of the steps above resolve your issue, visit the [Contact Support](/help/contact-support) page to reach the Paperlink AI team by email or live chat.
+</Note>

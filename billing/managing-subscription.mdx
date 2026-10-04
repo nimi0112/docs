@@ -1,0 +1,150 @@
+---
+title: "Managing Your Paperlink AI Subscription and Billing"
+sidebarTitle: "Subscription"
+description: "Learn how to upgrade, downgrade, or cancel your Paperlink AI plan, update payment details, and understand how monthly reply limits and overages work."
+---
+
+Every aspect of your Paperlink AI subscription — plan changes, payment details, invoices, and usage limits — is managed directly from the billing section of your dashboard. You don't need to contact support to make routine changes; just navigate to **Dashboard → Account → Billing** and everything is a few clicks away. This page walks you through each action you might need to take during the life of your subscription.
+
+## Accessing Billing Settings
+
+All billing actions start in the same place.
+
+<Steps>
+  <Step title="Open your dashboard">
+    Sign in at [app.paperlink.ai/sign-in](https://pl-dev-web.nimishnandwana.workers.dev/sign-in) and land on your main dashboard.
+  </Step>
+  <Step title="Go to Account settings">
+    Click your **account avatar** or name in the bottom-left corner of the sidebar, then select **Account** from the menu.
+  </Step>
+  <Step title="Select the Billing tab">
+    Inside Account settings, click the **Billing** tab. Here you'll find your current plan, next renewal date, reply usage, payment method, and invoice history.
+  </Step>
+</Steps>
+
+## Upgrading Your Plan
+
+Upgrading your plan takes effect **immediately** — the moment you confirm the change, your new reply limit, page cap, bot count, and seat count are all unlocked.
+
+<Steps>
+  <Step title="Navigate to Billing settings">
+    Go to **Dashboard → Account → Billing** as described above.
+  </Step>
+  <Step title="Click 'Change Plan'">
+    Under your current plan summary, click the **Change Plan** button to view all available tiers.
+  </Step>
+  <Step title="Select your new plan">
+    Choose the plan you want to upgrade to — **Growth** ($99/mo) or **Scale** ($299/mo) — and click **Upgrade**.
+  </Step>
+  <Step title="Confirm and pay">
+    Review the prorated charge shown on the confirmation screen. Paperlink AI calculates the difference between your current plan and the new plan for the remaining days in your billing cycle. Confirm to complete the upgrade.
+  </Step>
+</Steps>
+
+<Info>
+  Prorated billing means you only pay for the upgraded tier from the day you switch, not for the entire month. For example, if you upgrade halfway through your billing cycle, you'll be charged roughly half the price difference between your old and new plan.
+</Info>
+
+## Downgrading Your Plan
+
+Downgrading takes effect at the **start of your next billing cycle**, not immediately. You continue to enjoy your current plan's full limits until your renewal date.
+
+<Steps>
+  <Step title="Navigate to Billing settings">
+    Go to **Dashboard → Account → Billing**.
+  </Step>
+  <Step title="Click 'Change Plan'">
+    Click **Change Plan** under your current subscription summary.
+  </Step>
+  <Step title="Select a lower-tier plan">
+    Choose the plan you want to move to and click **Downgrade**. You'll see a confirmation message showing the date the change takes effect.
+  </Step>
+  <Step title="Review your current usage">
+    Before confirming, check that your active bots, uploaded pages, and team seats all fall within the lower plan's limits. Downgrading won't automatically delete anything, but bots or content that exceed the new plan's caps will be paused until you reduce usage.
+  </Step>
+</Steps>
+
+<Warning>
+  If your current usage exceeds the lower plan's limits — for example, you have 3 active bots but you're downgrading to Starter (1 bot limit) — the bots above the new limit will be **paused** when the downgrade takes effect. Similarly, if your uploaded knowledge pages exceed the new cap, those pages will become inactive and your bots won't be able to reference them until you either remove pages or upgrade again. Review your usage carefully before confirming a downgrade.
+</Warning>
+
+## Canceling Your Subscription
+
+You can cancel your Paperlink AI subscription at any time from the Billing settings page. Cancellation does not trigger an immediate termination — you retain full access to your current plan until the end of your paid billing period.
+
+<Steps>
+  <Step title="Navigate to Billing settings">
+    Go to **Dashboard → Account → Billing**.
+  </Step>
+  <Step title="Click 'Cancel Subscription'">
+    Scroll to the bottom of the Billing tab and click **Cancel Subscription**.
+  </Step>
+  <Step title="Confirm cancellation">
+    Review the confirmation dialog, which shows the date your access ends. Click **Confirm Cancellation** to proceed.
+  </Step>
+</Steps>
+
+After cancellation, your bots will stop responding to visitor questions once your billing period ends. Your account data — uploaded documents, bot configurations, and analytics history — is retained for **30 days** after the subscription lapses. If you resubscribe within that window, everything is restored exactly as you left it. After 30 days, data is permanently deleted.
+
+<Tip>
+  Changed your mind? You can reactivate your subscription any time before the retention window closes by returning to **Dashboard → Account → Billing** and selecting a new plan.
+</Tip>
+
+## Updating Your Payment Method
+
+Keep your payment details current to avoid any interruption to your bots.
+
+<Steps>
+  <Step title="Navigate to Billing settings">
+    Go to **Dashboard → Account → Billing**.
+  </Step>
+  <Step title="Click 'Update Payment Method'">
+    Under the Payment section, click **Update Payment Method**. This opens the secure billing portal.
+  </Step>
+  <Step title="Enter your new card details">
+    Add or replace your credit card information in the secure form. All payment data is encrypted end-to-end and processed through our PCI-compliant payment provider — Paperlink AI never stores your raw card details.
+  </Step>
+  <Step title="Save your changes">
+    Click **Save** to confirm the new payment method. It will be used for all future billing cycles.
+  </Step>
+</Steps>
+
+## Monthly Reply Limits
+
+Understanding how replies are counted helps you stay on top of your usage and avoid unexpected bot downtime.
+
+<Accordion title="What counts as a reply?">
+  A **reply** is counted each time a visitor submits a message through your embedded chat widget and Paperlink AI's RAG engine returns an AI-generated answer. Unanswered messages (for example, if a visitor types but navigates away before submitting) do not count. Test conversations you run inside the dashboard builder also do not count against your monthly total.
+</Accordion>
+
+<Accordion title="What happens when I reach my reply limit?">
+  When your account reaches its monthly reply limit, your bots stop generating new AI responses for visitors. A polite fallback message is displayed in the chat widget letting users know the assistant is temporarily unavailable. Your bots resume responding automatically at the start of your next billing cycle when the counter resets.
+
+  To avoid interruption, you can:
+  - **Upgrade your plan** immediately from **Dashboard → Account → Billing** — the upgrade takes effect at once and your bots start responding again within seconds.
+  - **Monitor usage** from the Analytics dashboard, which shows your running reply total and a projected end-of-cycle estimate so you can act before hitting the ceiling.
+</Accordion>
+
+<Accordion title="When does my reply count reset?">
+  Your reply count resets on your **monthly billing renewal date** — the same date each month that your subscription renews. You can find your next renewal date on the Billing settings page.
+</Accordion>
+
+## Invoices and Receipts
+
+Paperlink AI automatically generates an invoice for every successful billing charge. You can download past invoices at any time for expense reporting or accounting purposes.
+
+<Steps>
+  <Step title="Navigate to Billing settings">
+    Go to **Dashboard → Account → Billing**.
+  </Step>
+  <Step title="Scroll to Invoice History">
+    The **Invoice History** section lists every charge on your account with the date, amount, and plan.
+  </Step>
+  <Step title="Download a PDF receipt">
+    Click the **Download** icon next to any invoice to save a PDF receipt to your device. The PDF includes your billing address, plan details, charge amount, and a unique invoice number.
+  </Step>
+</Steps>
+
+<Note>
+  Need custom invoicing, a volume discount, or pricing tailored to a larger organization? Paperlink AI offers enterprise and custom plans not listed on the public pricing page. Reach out to the team at **support@paperlink.ai** or start a live chat from your dashboard and someone will get back to you with options built around your specific needs.
+</Note>

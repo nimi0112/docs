@@ -1,0 +1,77 @@
+---
+title: "How Paperlink AI Processes Your Docs and Answers Questions"
+sidebarTitle: "How It Works"
+description: "Understand the RAG pipeline behind Paperlink AI — from document ingestion and indexing to real-time question answering with accurate responses."
+---
+
+Paperlink AI turns your business documents into a live, conversational knowledge source. When a visitor asks a question on your website, the system searches your uploaded documents, pulls the most relevant passages, and returns a clear, accurate answer — all in under two seconds. Understanding how that process works helps you get the most out of every document you upload.
+
+## The RAG Pipeline
+
+Paperlink AI is built on **Retrieval-Augmented Generation (RAG)** — a technique that grounds every answer in your actual documents rather than relying on a general-purpose language model's assumptions. Instead of guessing, the system finds the right information first, then uses it to construct a precise response.
+
+<Steps>
+  <Step title="Upload Your Documents">
+    You upload PDFs, Word documents, or plain text files directly to your bot's knowledge base. Paperlink AI accepts up to 5,000 pages per bot, so you can include everything from product manuals and contracts to policy guides and FAQs.
+  </Step>
+  <Step title="Extract and Parse Content">
+    Paperlink AI reads through every page of your documents, extracting clean text from paragraphs, tables, headers, and structured sections. This step converts your files into a format the AI can reason over.
+  </Step>
+  <Step title="Index for Retrieval">
+    The extracted content is broken into meaningful chunks and stored in a vector index — a specialized database that allows the system to find semantically similar content, not just keyword matches. If a visitor asks about "refund policy," the system finds the relevant section even if the document says "return and reimbursement terms."
+  </Step>
+  <Step title="Retrieve Relevant Passages">
+    When a visitor submits a question, Paperlink AI searches the index in real time to retrieve the most relevant chunks from your documents. Only the passages that are genuinely related to the question are selected for the next step.
+  </Step>
+  <Step title="Generate a Structured Answer">
+    The retrieved passages are passed to the AI, which synthesizes them into a coherent, readable response. The answer is grounded entirely in your documents — no fabricated details, no outside speculation.
+  </Step>
+</Steps>
+
+## Document Ingestion
+
+When you upload a document, Paperlink AI begins processing it immediately. The ingestion pipeline handles the following file types:
+
+- **PDFs** — including multi-column layouts, tables, and text-heavy reports
+- **Word documents (.docx)** — with support for headings, lists, and inline formatting
+- **Plain text files (.txt)** — clean and fast to process
+
+Each bot supports up to **5,000 pages** of content across all uploaded documents combined. A single 200-page policy manual and a collection of 50 one-page FAQs both count toward the same page total.
+
+Processing time depends on document length and complexity. Most documents finish indexing within one to three minutes. Larger uploads — those approaching the 5,000-page limit — may take up to ten minutes. You'll see a status indicator in the dashboard while processing is underway, and your bot becomes active as soon as indexing completes.
+
+<Note>
+  Paperlink AI uses end-to-end encryption to protect your documents at rest and in transit. Your files are never used to train any AI model, and no data is shared outside your account. Your business content stays yours.
+</Note>
+
+## Answer Generation
+
+Once a visitor submits a question through your embedded chat widget, the full retrieval-to-response cycle completes in **under two seconds**. Here's what happens behind the scenes:
+
+1. The visitor's question is converted into the same vector format as your indexed content.
+2. The system scores every chunk in your knowledge base by relevance and selects the top-matching passages.
+3. Those passages are assembled into a focused context window.
+4. The AI reads the context and writes a clear, structured answer using only the information it was given.
+
+Responses are formatted for readability — the assistant does not paste raw document text. Instead, it distills the relevant details into a direct, conversational reply that your visitors can act on immediately.
+
+## Accuracy and Confidence
+
+Paperlink AI achieves a **98% accuracy rate** across the questions answered on the platform. That figure reflects how often the system returns a response that correctly addresses the visitor's question based on the available documents.
+
+When a question is ambiguous or could match multiple sections of your content, the system selects the most likely interpretation and provides a response — while surfacing the relevant source context so the visitor can verify the answer if needed.
+
+When a question falls entirely outside the scope of your uploaded documents, Paperlink AI does not guess. Instead, it returns a clear, graceful message letting the visitor know that the answer isn't available in the current knowledge base, and it can optionally prompt them to contact your support team. This prevents misinformation and preserves trust.
+
+## What Paperlink AI Does Not Do
+
+It's just as important to understand the boundaries of the system as it is to understand its capabilities.
+
+<CardGroup cols={2}>
+  <Card title="Does Not Invent Information" icon="circle-xmark" href="/concepts/knowledge-base">
+    Paperlink AI only answers questions based on the documents you have uploaded. It will not generate plausible-sounding information that isn't present in your knowledge base. If the answer isn't in your documents, the assistant says so.
+  </Card>
+  <Card title="Does Not Train on Your Data" icon="shield-halved" href="/help/faq">
+    Your uploaded documents and the conversations your visitors have are never used to train or fine-tune any AI model. Your content remains private and is used exclusively to power answers for your own bot.
+  </Card>
+</CardGroup>

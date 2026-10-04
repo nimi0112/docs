@@ -1,0 +1,57 @@
+---
+title: "Upload Documents to Your Paperlink AI Knowledge Base"
+sidebarTitle: "Upload Documents"
+description: "Learn how to upload PDFs, Word documents, and text files to Paperlink AI and prepare your content for accurate, fast AI-powered answers."
+---
+
+The quality of your uploaded documents directly determines how accurately your bot answers customer questions. Paperlink AI uses a RAG (Retrieval-Augmented Generation) engine that searches your actual document content to construct every response — so well-structured, clearly written source material produces precise, confident answers, while noisy or poorly formatted documents can introduce gaps and inaccuracies. Taking a few minutes to prepare your files before uploading pays off in measurably better bot performance from day one.
+
+## Adding Documents to Your Knowledge Base
+
+<Steps>
+  <Step title="Open your bot's knowledge base">
+    From the main dashboard, select the bot you want to update and navigate to the **Knowledge Base** tab. You'll see a list of all documents currently powering that bot.
+  </Step>
+  <Step title="Upload your files">
+    Click the **Upload Documents** button in the top-right corner, or drag and drop files directly onto the knowledge base panel. You can upload multiple files in a single action.
+  </Step>
+  <Step title="Confirm supported formats">
+    Paperlink AI accepts the following file types:
+
+    | Format | Extension | Notes |
+    |--------|-----------|-------|
+    | PDF | `.pdf` | Text-based PDFs process most accurately |
+    | Word Document | `.docx` | Headings and formatting are preserved |
+    | Plain Text | `.txt` | Great for FAQs and structured content |
+
+    Each bot supports up to **5,000 pages** of content across all uploaded documents combined.
+  </Step>
+  <Step title="Wait for processing to complete">
+    After uploading, each document shows a processing status indicator. A **green checkmark** means the document has been fully indexed and is live in your bot's knowledge base. Processing typically takes a few seconds to a couple of minutes depending on file size.
+  </Step>
+</Steps>
+
+## Tips for Best Results
+
+<Tip>
+  **Structure your documents for maximum accuracy.** PDFs and Word docs with clear headings, bullet points, and logical sections give the AI strong retrieval signals. Short, direct sentences help the engine match customer questions to the right passages. Avoid walls of unbroken text, and organize related topics into distinct sections so the bot can pinpoint the correct answer without ambiguity.
+</Tip>
+
+## Batch Uploads
+
+You don't need to upload files one at a time. Select multiple files from your file picker or drag a group of files onto the upload area simultaneously. Each file is queued and processed independently, so you can continue working in the dashboard while your documents index in the background. Batch uploads are especially useful when first populating a new bot's knowledge base from an existing document library.
+
+## Replacing Documents
+
+When your source material changes — a policy update, a new product spec, a revised contract — you'll want to keep your bot's knowledge current. To replace a document:
+
+1. Locate the existing file in your **Knowledge Base** tab.
+2. Click the **Delete** icon (trash can) next to the document and confirm removal.
+3. Upload the updated version of the file.
+4. Wait for the green checkmark to confirm the new version has been indexed.
+
+Your bot will begin using the updated content immediately after processing completes. Changes do not require any updates to your embed code or widget configuration.
+
+<Warning>
+  **Scanned and image-only PDFs produce significantly lower accuracy.** If your PDF was created by scanning a physical document without optical character recognition (OCR), Paperlink AI cannot extract the text it needs to answer questions. Before uploading, run scanned documents through an OCR tool (such as Adobe Acrobat, Google Drive, or a free online OCR service) to convert them to text-searchable PDFs. You can tell a PDF lacks selectable text if you cannot highlight or copy words when opening the file in a standard PDF viewer.
+</Warning>

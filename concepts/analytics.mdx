@@ -1,0 +1,114 @@
+---
+title: "Understanding Your Paperlink AI Analytics Dashboard"
+sidebarTitle: "Analytics"
+description: "Track conversation volume, response accuracy, and user engagement in real time with Paperlink AI's built-in analytics dashboard to improve bot performance."
+---
+
+The Paperlink AI analytics dashboard gives you a clear, real-time view of how your bot is performing — how many conversations it's handling, how accurately it's answering questions, which topics visitors ask about most, and where gaps in your knowledge base might be costing you engagement. Rather than deploying a bot and hoping for the best, analytics put you in control: you can see exactly what's working, what isn't, and what to do about it.
+
+## Accessing Analytics
+
+Your analytics dashboard is available inside the Paperlink AI web app for every bot you manage. To access it:
+
+<Steps>
+  <Step title="Sign In to Your Dashboard">
+    Go to [app.paperlink.ai](https://pl-dev-web.nimishnandwana.workers.dev/sign-in) and sign in to your account. You'll land on the main dashboard showing your list of bots.
+  </Step>
+  <Step title="Select a Bot">
+    Click on the bot whose analytics you want to review. Each bot has its own independent analytics view — data is never mixed across bots.
+  </Step>
+  <Step title="Open the Analytics Tab">
+    Click the **Analytics** tab in the bot's navigation bar. The dashboard loads immediately with your most recent data.
+  </Step>
+</Steps>
+
+<Note>
+  Analytics data updates in real time. Metrics refresh continuously as conversations happen, so the numbers you see reflect the current state of your bot's activity — not a delayed snapshot from the previous day or hour.
+</Note>
+
+## Key Metrics
+
+The analytics dashboard surfaces four primary metrics that give you a complete picture of your bot's health and impact.
+
+<CardGroup cols={2}>
+  <Card title="Conversations" icon="comments" href="/concepts/analytics">
+    The total number of chat sessions initiated by visitors over a selected time period. Track conversation volume by day, week, or month to identify traffic patterns and measure the impact of changes to your knowledge base or widget placement.
+  </Card>
+  <Card title="Response Accuracy" icon="bullseye" href="/concepts/analytics">
+    The percentage of questions for which the bot returned a relevant, document-grounded answer. Paperlink AI benchmarks at a **98% accuracy rate** platform-wide. Monitor this metric over time to catch regressions after document updates.
+  </Card>
+  <Card title="User Engagement" icon="arrow-pointer" href="/concepts/analytics">
+    Measures how visitors interact with the chat widget — including open rate, messages per session, and session duration. High engagement signals that visitors find the assistant useful. Low engagement may indicate widget placement or greeting message issues.
+  </Card>
+  <Card title="Top Questions" icon="list-ol" href="/concepts/analytics">
+    A ranked list of the most frequently asked questions across all conversations. Use this to understand what your visitors care about most, identify content gaps in your knowledge base, and prioritize which documents to add or improve.
+  </Card>
+</CardGroup>
+
+## Monthly Reply Usage
+
+Every Paperlink AI plan includes a monthly reply allowance — the number of AI-generated responses your bot can deliver within a billing cycle.
+
+<CardGroup cols={3}>
+  <Card title="Starter" icon="seedling" href="/billing/plans">
+    **3,000 replies/month**
+  </Card>
+  <Card title="Growth" icon="chart-line" href="/billing/plans">
+    **10,000 replies/month**
+  </Card>
+  <Card title="Scale" icon="building" href="/billing/plans">
+    **40,000 replies/month**
+  </Card>
+</CardGroup>
+
+The analytics dashboard shows your current reply usage as a progress bar alongside your plan's monthly limit. You can view usage broken down by bot or across your entire account, making it easy to see which bots are consuming the most replies.
+
+When your reply usage approaches the plan limit, Paperlink AI will send you an email notification so you have time to upgrade before your bot stops responding. You can upgrade your plan at any time from the **Billing** section of your account settings — the change takes effect immediately and your new reply limit applies for the remainder of the current billing cycle.
+
+<Warning>
+  If your account reaches its monthly reply limit, your bots will stop generating new responses until the cycle resets or you upgrade your plan. Visitors will see a message indicating that the assistant is temporarily unavailable. Monitor your usage regularly to avoid unexpected downtime.
+</Warning>
+
+## Response Accuracy
+
+Paperlink AI measures response accuracy by evaluating whether each answer was grounded in a relevant passage from your knowledge base. The platform benchmarks at a **98% accuracy rate** — meaning 98 out of every 100 answers are directly supported by your uploaded documents.
+
+Your bot's individual accuracy rate is displayed on the analytics dashboard and is calculated based on its own conversation history. Factors that affect accuracy include:
+
+- **Document quality** — well-structured, clearly written documents produce more precise answers
+- **Knowledge base coverage** — topics not covered in your documents will result in "I don't know" responses, which count against accuracy if measured by question resolution rate
+- **Question clarity** — very ambiguous or multi-part questions are harder for any retrieval system to answer precisely
+
+Use the accuracy trend chart to spot drops over time, particularly after adding or removing documents. A sudden drop often signals that a recently uploaded document has conflicting content or that an important document was accidentally deleted.
+
+## Improving Bot Performance
+
+Analytics are only useful if you act on them. Here's how to translate dashboard data into a better-performing bot:
+
+<Accordion title="Review Top Questions for content gaps">
+  Export or browse your Top Questions list and look for frequently asked questions that the bot is answering with low confidence or deflecting entirely. These represent gaps in your knowledge base. Add a document or section that directly addresses each high-frequency unanswered question.
+</Accordion>
+
+<Accordion title="Investigate low-accuracy sessions">
+  Filter conversations by sessions where the bot returned a fallback response. Read through a sample of those conversations to understand what visitors were asking. You'll often find patterns — a product name that changed, a process that was updated, or a topic that your current documents don't address.
+</Accordion>
+
+<Accordion title="Optimize for engagement">
+  If your open rate or messages-per-session metric is low, experiment with your widget's greeting message. A specific, action-oriented prompt ("Ask me anything about your order or our return policy") outperforms generic openers ("Hi, how can I help you?"). Check the engagement trend after making changes to measure impact.
+</Accordion>
+
+<Accordion title="Monitor reply usage against growth">
+  If your monthly conversation volume is growing consistently, plan an upgrade before you hit the reply limit. Analytics make this easy — you can project your end-of-month usage based on current daily averages and upgrade proactively rather than reactively.
+</Accordion>
+
+## Exporting Data
+
+You can export your analytics data as a CSV file directly from the dashboard. The export includes conversation timestamps, question text, response status, and engagement signals for any date range you select.
+
+To export data, navigate to the **Analytics** tab for the relevant bot, set your desired date range using the date picker, and click **Export CSV**. The file downloads immediately to your browser.
+
+Exported data can be used for internal reporting, support ticket audits, or sharing performance summaries with stakeholders who don't have a Paperlink AI seat.
+
+<Info>
+  Analytics data is retained for the lifetime of your account. You can export historical data at any time, regardless of how long ago the conversations occurred. There is no rolling deletion window for conversation analytics.
+</Info>

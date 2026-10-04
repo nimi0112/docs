@@ -1,0 +1,122 @@
+---
+title: "Set Up and Manage Your Paperlink AI Account and Team"
+sidebarTitle: "Account Setup"
+description: "Configure your Paperlink AI workspace, manage team members, set up authentication options, and customize your account settings for your organization."
+---
+
+This page covers everything from creating your Paperlink AI account for the first time through configuring your workspace for your entire team. Whether you're a solo founder embedding a single bot or an IT admin rolling out Paperlink AI across a department, you'll find the setup steps, security details, and team management options you need right here.
+
+## Creating Your Account
+
+Navigate to the [Paperlink AI sign-up page](https://pl-dev-web.nimishnandwana.workers.dev/sign-up) and choose the registration method that suits your organization:
+
+<Tabs>
+  <Tab title="Email & Password">
+    1. Enter your **full name**, **work email address**, and a strong **password**.
+    2. Click **Create Account**.
+    3. Open your inbox and click the **Verify Email** link in the confirmation message.
+    4. Return to the dashboard — your 3-day free trial begins immediately.
+
+    <Tip>
+      Use your work email address rather than a personal one. This makes it easier to transfer ownership or add team members under the same domain later.
+    </Tip>
+  </Tab>
+  <Tab title="Google OAuth">
+    1. Click **Continue with Google** on the sign-up page.
+    2. Select the Google account you want to associate with Paperlink AI.
+    3. Grant the requested permissions and confirm.
+    4. You're signed in and your account is active — no separate email verification is required.
+  </Tab>
+  <Tab title="Microsoft OAuth">
+    1. Click **Continue with Microsoft** on the sign-up page.
+    2. Sign in with your Microsoft account or Azure Active Directory credentials.
+    3. Approve the permissions request.
+    4. You're signed in and your account is active — no separate email verification is required.
+  </Tab>
+</Tabs>
+
+## Signing In
+
+Return to your account any time at the [Paperlink AI sign-in page](https://pl-dev-web.nimishnandwana.workers.dev/sign-in). Use the same method you chose during sign-up — email and password, Google, or Microsoft.
+
+**Forgot your password?** On the sign-in page, click **Forgot password?**, enter the email address associated with your account, and follow the reset link sent to your inbox. Password reset links expire after 30 minutes for security.
+
+<Info>
+  If you signed up with Google or Microsoft OAuth, password reset does not apply — your sign-in is handled entirely by your OAuth provider. Manage your credentials directly in your Google or Microsoft account settings.
+</Info>
+
+## Workspace Settings
+
+After signing in, access your workspace settings by clicking your **profile avatar** in the top-right corner of the dashboard, then selecting **Settings**.
+
+<Accordion title="Profile Settings">
+  Update your **display name**, **profile photo**, and **email address** from the Profile tab. If you change your email, a verification link is sent to the new address before the change takes effect.
+</Accordion>
+
+<Accordion title="Organization Name">
+  Set your **organization name** under the General tab of Settings. This name appears in your dashboard header and in any team invitation emails sent to colleagues.
+</Accordion>
+
+<Accordion title="Timezone">
+  Set your **timezone** so that analytics reports, conversation timestamps, and scheduled exports reflect your local time. Navigate to **Settings → General → Timezone** and select your region from the dropdown.
+</Accordion>
+
+## Inviting Team Members
+
+Paperlink AI uses a **seat-based** team model. The number of seats available depends on your current plan:
+
+| Plan    | Included Seats |
+|---------|---------------|
+| Starter | 2 seats       |
+| Growth  | 5 seats       |
+| Scale   | 15 seats      |
+
+To invite a teammate:
+
+<Steps>
+  <Step title="Open Team Settings">
+    Go to **Settings → Team** in the left sidebar of your dashboard.
+  </Step>
+  <Step title="Enter Their Email">
+    Click **Invite Member**, type your colleague's email address, and select their role — **Admin** (full access to all settings and bots) or **Member** (can view and manage bots but cannot change billing or team settings).
+  </Step>
+  <Step title="Send the Invitation">
+    Click **Send Invite**. Your teammate receives an email with a link to accept the invitation and set up their own login. They can join using email/password, Google, or Microsoft OAuth.
+  </Step>
+</Steps>
+
+<Note>
+  If you've reached your plan's seat limit, you'll need to upgrade before sending additional invitations. Visit **Settings → Billing** or see the [plans page](/billing/plans) to compare options.
+</Note>
+
+## Security Settings
+
+Your account and data are protected by multiple layers of security built into Paperlink AI's infrastructure.
+
+<Note>
+  Paperlink AI does not use your documents to train AI models. Your data is encrypted and belongs to you.
+</Note>
+
+<Accordion title="End-to-End Encryption">
+  All documents you upload and all conversations your bot handles are protected with end-to-end encryption in transit and at rest. No third party — including Paperlink AI staff — can access the raw content of your files or chat logs outside of operational necessity.
+</Accordion>
+
+<Accordion title="No Model Training on Your Data">
+  Your uploaded documents, bot configurations, and conversation history are never used to train, fine-tune, or improve any AI model. The underlying models are pre-trained; your data only flows through the RAG retrieval pipeline to generate answers.
+</Accordion>
+
+<Accordion title="Data Deletion">
+  You can delete individual documents, entire bots, or your full account at any time from the dashboard. Deletion is permanent and propagates through all systems within 30 days. To delete your account, go to **Settings → Account → Delete Account**.
+</Accordion>
+
+<Accordion title="Session Management">
+  Review and revoke active sessions from **Settings → Security → Active Sessions**. If you suspect unauthorized access, revoke all sessions and reset your password immediately.
+</Accordion>
+
+## Changing Your Plan
+
+Your current plan, usage counters (replies, pages, bots, seats), and billing cycle are all visible under **Settings → Billing**. To upgrade or downgrade, visit the [plans page](/billing/plans) and select the tier that fits your needs.
+
+<Info>
+  Upgrades take effect immediately and are prorated for the remainder of your billing cycle. Downgrades take effect at the start of your next billing period so you can continue using your current limits until then.
+</Info>

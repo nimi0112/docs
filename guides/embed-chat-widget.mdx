@@ -1,0 +1,121 @@
+---
+title: "Embed the Paperlink AI Chat Widget on Your Website"
+sidebarTitle: "Embed Widget"
+description: "Add Paperlink AI's chat widget to any website with one line of HTML. Configure position, appearance, and behavior without any coding required."
+---
+
+Getting your Paperlink AI bot live on your website takes one copy-and-paste. There's no SDK to install, no build step, no API keys to manage in your codebase — just a single `<script>` tag that you drop into your site's HTML, and the chat widget appears automatically. The same snippet works on any platform: hand-coded HTML, WordPress, Webflow, Squarespace, React apps, and everything in between. Once embedded, the widget stays up to date automatically — any changes you make to your bot's knowledge base or appearance settings take effect everywhere without touching your site's code again.
+
+## Getting Your Embed Code
+
+Every bot has its own unique embed snippet. To find yours:
+
+1. Open the **Dashboard** and select the bot you want to embed.
+2. Navigate to **Bot Settings** → **Embed**.
+3. Click **Copy Snippet** to copy the complete script tag to your clipboard.
+
+Your embed code is unique to each bot. If you manage multiple bots, each one has a different `data-bot-id` value — make sure you copy the snippet from the correct bot's settings page.
+
+## Installing the Widget
+
+<Steps>
+  <Step title="Copy your embed snippet">
+    From **Bot Settings → Embed**, click **Copy Snippet**. The snippet includes your unique bot ID and default configuration already filled in.
+  </Step>
+  <Step title="Paste before the closing body tag">
+    Open your site's HTML and paste the snippet just before the `</body>` tag on every page where you want the widget to appear. Placing it at the end of `<body>` ensures it loads after your page content and doesn't affect page render performance.
+  </Step>
+  <Step title="Deploy for CMS platforms">
+    If you're using a CMS or website builder, you don't need to edit individual pages. Paste the snippet in your platform's **site-wide footer scripts** or **custom code** area so it loads globally:
+
+    - **WordPress** — use a plugin like *Insert Headers and Footers*, or paste into your theme's `footer.php` before `</body>`
+    - **Webflow** — go to **Project Settings → Custom Code → Footer Code**
+    - **Squarespace** — go to **Settings → Advanced → Code Injection → Footer**
+    - **Shopify** — paste into **Online Store → Themes → Edit Code → `theme.liquid`** before `</body>`
+  </Step>
+  <Step title="Verify the widget appears">
+    Load or refresh any page where you installed the snippet. The chat widget should appear in the bottom-right corner within 1–2 seconds of the page loading. Click it to open the chat panel and confirm your bot responds correctly.
+  </Step>
+</Steps>
+
+## Code Examples
+
+<CodeGroup>
+
+```html HTML
+<!-- Paste this snippet before the </body> tag -->
+<script
+  src="https://cdn.paperlink.ai/widget.js"
+  data-bot-id="YOUR_BOT_ID"
+  data-position="bottom-right"
+  data-theme="auto"
+  async
+></script>
+```
+
+```jsx React
+import { useEffect } from 'react';
+
+export function PaperlinkWidget({ botId }) {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.paperlink.ai/widget.js';
+    script.setAttribute('data-bot-id', botId);
+    script.setAttribute('data-position', 'bottom-right');
+    script.setAttribute('data-theme', 'auto');
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, [botId]);
+
+  return null;
+}
+
+// Usage: <PaperlinkWidget botId="YOUR_BOT_ID" />
+```
+
+```text WordPress (Insert Headers and Footers Plugin)
+1. Install the "Insert Headers and Footers" plugin from the WordPress plugin directory.
+2. Go to Settings → Insert Headers and Footers.
+3. Paste your Paperlink AI snippet into the "Scripts in Footer" textarea.
+4. Click Save.
+
+The widget will load on every page of your WordPress site automatically.
+No theme editing or coding is required.
+```
+
+</CodeGroup>
+
+## Configuration Options
+
+Customize the widget's behavior directly in the script tag using `data-*` attributes. Changes to these attributes take effect as soon as you redeploy your site.
+
+| Attribute | Required | Values | Description |
+|-----------|----------|--------|-------------|
+| `data-bot-id` | ✅ Yes | Your bot's unique ID | Connects the widget to your specific bot and knowledge base |
+| `data-position` | No | `bottom-right` (default), `bottom-left` | Controls which corner of the screen the widget anchors to |
+| `data-theme` | No | `auto` (default), `light`, `dark` | Sets the widget color scheme; `auto` follows the visitor's system preference |
+
+For appearance customization beyond position and theme — including colors, bot name, avatar, and welcome message — use the visual **Appearance** settings in your bot's dashboard. Those changes apply everywhere your bot is embedded without any code updates.
+
+## Testing Your Integration
+
+After pasting the snippet, open your site in a browser and check the following:
+
+- The chat bubble appears in the expected corner within 1–2 seconds of the page loading
+- Clicking the bubble opens the chat panel without errors
+- Typing a question returns an answer drawn from your knowledge base
+- The widget's theme and position match what you configured
+
+If the widget doesn't appear, confirm that the snippet is placed before the closing `</body>` tag (not inside `<head>`), that your bot ID is correct, and that your bot has at least one document in its knowledge base.
+
+## Embedding on Multiple Sites
+
+<Note>
+  Every Paperlink AI plan — including Starter — includes **unlimited sites**. You can paste your bot's embed snippet on as many websites, subdomains, and pages as you need without any additional cost or configuration. Each site simply loads the same widget connected to the same bot and knowledge base.
+</Note>
+
+If you need different knowledge bases or different appearances for different sites, create separate bots for each site and embed each bot's unique snippet in the appropriate location. See [Managing Multiple Bots](/guides/managing-multiple-bots) for details.

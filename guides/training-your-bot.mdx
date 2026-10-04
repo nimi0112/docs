@@ -1,0 +1,74 @@
+---
+title: "Optimize Your Bot's Knowledge for Accurate Answers"
+sidebarTitle: "Train Your Bot"
+description: "Improve your Paperlink AI bot's accuracy by curating your knowledge base, testing with real questions, and iterating on content based on analytics."
+---
+
+When people talk about "training" an AI bot, they often picture feeding it data to adjust model weights — that's not how Paperlink AI works. Your bot's intelligence comes entirely from the documents in its knowledge base. There is no machine learning training process, and Paperlink AI never uses your content to train any underlying model. Improving your bot means improving the source material it reads. This guide walks you through the practical cycle of curating content, testing responses, identifying gaps, and iterating — so your bot gets smarter every week without any technical expertise required.
+
+## Start with Quality Content
+
+The single biggest driver of bot accuracy is the quality of your source documents. Before uploading anything, ask yourself whether a human reading that document could answer your customers' most common questions. If the answer is yes, your bot can too.
+
+Characteristics of strong source documents:
+
+- **Clear, direct language** — avoid jargon, abbreviations, or internal shorthand that customers won't use when asking questions
+- **Well-organized structure** — headings, subheadings, and numbered lists help the retrieval engine find the right section
+- **Complete coverage** — each topic a customer might ask about should appear explicitly in at least one document
+- **Up-to-date information** — outdated pricing, policies, or product specs will produce incorrect answers; replace stale documents promptly
+- **Reasonable length** — shorter, focused documents (one topic per file) tend to outperform long omnibus documents where topics blur together
+
+## Test with Real Questions
+
+The dashboard's built-in **Chat Preview** lets you talk to your bot exactly as a customer would, before it ever goes live. Don't test with abstract queries — test with the actual questions your customers submit through support tickets, live chat logs, or sales conversations.
+
+Navigate to your bot and open the **Preview** tab. Type questions in natural language, the way a real customer would phrase them. Check that the answer is:
+
+- Factually correct based on your documents
+- Complete — it covers the full answer, not just part of it
+- Concise — it doesn't pad the response with irrelevant content
+- Appropriately sourced — the referenced passage actually contains the answer
+
+## Identify Gaps
+
+When the bot gives a wrong, incomplete, or "I don't know" response, that's a signal — not a failure. It means one of three things: the information doesn't exist in your documents, it's buried in an unclear passage, or it's present but described in language too different from the customer's question.
+
+For each gap you find, trace it back to your documents:
+
+1. Search your uploaded files for the relevant topic.
+2. If the content is missing entirely, add a document or section that covers it.
+3. If the content exists but is unclear or poorly phrased, revise that passage to be more direct.
+4. If the content is present but phrased very differently from how customers ask, consider adding a short FAQ-style section that mirrors common question phrasing.
+
+## Iterate and Improve
+
+Improving your bot is a loop, not a one-time task. Run through the following cycle regularly — especially after product changes, policy updates, or seasonal shifts in customer questions.
+
+<Steps>
+  <Step title="Test with real customer questions">
+    Open the **Chat Preview** in your dashboard and run through 10–20 questions drawn from real customer interactions or your support queue. Note which responses are accurate, incomplete, or incorrect.
+  </Step>
+  <Step title="Identify content gaps">
+    For each unsatisfactory response, determine whether the answer is missing from your documents, present but unclear, or phrased in a way the bot can't match to the customer's question.
+  </Step>
+  <Step title="Update your knowledge base">
+    Add new documents, upload revised versions of existing files, or replace outdated content. Use the **Knowledge Base** tab to delete old files and upload updated versions.
+  </Step>
+  <Step title="Re-test to confirm the fix">
+    Return to **Chat Preview** and ask the same questions that previously produced poor answers. Verify that the updated documents resolve the gaps before considering the iteration complete.
+  </Step>
+</Steps>
+
+## Using Analytics to Guide Updates
+
+Your bot's **Analytics** dashboard surfaces patterns you can't catch through manual testing alone. Check it regularly to spot systemic gaps and prioritize your content updates.
+
+The most valuable signal is the **Top Unanswered Questions** report, which lists the questions your bot couldn't confidently answer, ranked by frequency. This tells you exactly what content to add first — prioritized by the volume of customers hitting the same wall. Other useful signals include:
+
+- **Low-confidence responses** — answers the bot delivered with high uncertainty, flagged in the accuracy breakdown
+- **Short conversation sessions** — users who asked one question and left may not have found a satisfying answer
+- **High exit rates after specific topics** — a cluster of exits following questions about a particular subject points to a knowledge gap in that area
+
+<Tip>
+  **Add an FAQ document for your most common questions.** Even if the answers already exist somewhere in your longer documents, creating a dedicated FAQ file that mirrors the exact phrasing customers use — "How do I cancel my subscription?" rather than "Subscription Termination Policy" — dramatically improves match accuracy. FAQ documents are small, fast to create, and often produce the biggest single accuracy gains.
+</Tip>

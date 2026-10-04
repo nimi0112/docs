@@ -1,0 +1,99 @@
+---
+title: "Build and Embed Your First AI Chat Bot with Paperlink AI"
+sidebarTitle: "Quick Start"
+description: "Learn how to create your Paperlink AI account, upload your first document, and embed a working AI chat widget on your website in under 10 minutes."
+---
+
+This guide walks you through everything you need to go from zero to a live AI chat assistant on your website. By the time you finish, you'll have a Paperlink AI account, a bot trained on your documents, and a working embed snippet deployed on a page of your choice — all in under 10 minutes. No coding experience is required, and no credit card is needed to start your free trial.
+
+<Steps>
+
+  <Step title="Create Your Account">
+    Head to the [Paperlink AI sign-up page](https://pl-dev-web.nimishnandwana.workers.dev/sign-up) and create your account using one of the following methods:
+
+    - **Email and password** — enter your name, work email address, and a password of your choice
+    - **Google OAuth** — click **Continue with Google** to sign up instantly with your Google account
+    - **Microsoft OAuth** — click **Continue with Microsoft** to sign up with your Microsoft or Azure AD account
+
+    Once you complete sign-up, your **3-day free trial** begins automatically. No credit card is required, and you have full access to all features during the trial period. Check your inbox for a verification email and confirm your address to activate your account.
+  </Step>
+
+  <Step title="Create Your First Bot">
+    After signing in, you land on the main dashboard. To create your first bot:
+
+    1. Click the **New Bot** button in the top-right corner of the dashboard.
+    2. Enter a descriptive name for your bot (for example, "Customer Support Bot" or "HR Policy Assistant").
+    3. Optionally add a short description so teammates understand what this bot is for.
+    4. Click **Create Bot** to confirm.
+
+    Your new bot appears in the bot list, ready for documents.
+
+    <Tip>
+      Choose a name that reflects the bot's purpose and audience — you can always rename it later from the bot settings panel.
+    </Tip>
+  </Step>
+
+  <Step title="Upload Your Documents">
+    Open your bot and navigate to the **Knowledge Base** tab. Upload your source documents using one of these methods:
+
+    - **Drag and drop** files directly onto the upload area
+    - Click **Browse Files** to select documents from your computer
+
+    Paperlink AI supports **PDF files**, **Word documents (.docx)**, and **plain text files**. Each bot can hold up to **5,000 pages** of content. Once you upload a file, the AI processes and indexes it automatically — this typically takes less than a minute for most documents.
+
+    <Info>
+      You can upload multiple documents to a single bot. Paperlink AI merges them into one unified knowledge base, so your bot can answer questions that span several files at once.
+    </Info>
+
+    <Warning>
+      Make sure your documents do not contain sensitive personal data (such as customer PII) unless you have the appropriate data handling policies in place for your organization.
+    </Warning>
+  </Step>
+
+  <Step title="Test Your Bot">
+    Before going live, verify that your bot answers questions correctly. Select the **Preview** tab inside your bot to open the built-in chat interface.
+
+    Type a few questions you'd expect real visitors to ask — for example, questions about pricing, policies, or product details that appear in your uploaded documents. Review the responses to confirm they are accurate and well-sourced.
+
+    If an answer looks off, check that the relevant content is present in your uploaded documents and that the pages were processed successfully (a green status indicator appears next to each file).
+
+    <Tip>
+      Test with questions that have clear answers in your documents as well as edge-case questions outside the document scope. This helps you set accurate expectations with your users before you embed the widget publicly.
+    </Tip>
+  </Step>
+
+  <Step title="Embed on Your Website">
+    Once you're satisfied with your bot's responses, navigate to the **Embed** tab inside your bot. You'll see a ready-to-use script snippet pre-populated with your unique bot ID.
+
+    Copy the snippet and paste it into your website's HTML, just before the closing `</body>` tag:
+
+    ```html
+    <script
+      src="https://cdn.paperlink.ai/widget.js"
+      data-bot-id="YOUR_BOT_ID"
+      data-position="bottom-right"
+      async
+    ></script>
+    ```
+
+    Replace `YOUR_BOT_ID` with the actual ID shown in your dashboard (it's pre-filled when you copy from the Embed tab). The widget loads asynchronously, so it won't affect your page's load performance. Once the script is on your page, the chat icon appears in the bottom-right corner and is immediately available to your visitors.
+
+    <Note>
+      You can embed the same bot on multiple pages or multiple websites — there's no per-site limit on any plan. Just paste the same snippet wherever you want the assistant to appear.
+    </Note>
+  </Step>
+
+</Steps>
+
+## What's Next?
+
+Now that your bot is live, explore these guides to get the most out of Paperlink AI:
+
+<CardGroup cols={2}>
+  <Card title="Uploading Documents" icon="file-arrow-up" href="/guides/uploading-documents">
+    Learn how to organize your knowledge base, update existing files, and keep your bot's content fresh as your documents change.
+  </Card>
+  <Card title="Embed the Chat Widget" icon="code" href="/guides/embed-chat-widget">
+    Customize the widget's position, colors, and greeting message, and explore advanced embed options for single-page apps and portals.
+  </Card>
+</CardGroup>

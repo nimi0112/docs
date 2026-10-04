@@ -1,0 +1,78 @@
+{
+  "projectType": "saas",
+  "projectName": "Paperlink AI",
+  "projectDescription": "Paperlink AI is a RAG-powered knowledge engine that transforms uploaded business documents into an intelligent chat assistant, delivering instant structured answers to customers and reducing support volume.",
+  "theme": "almond",
+  "primaryColor": "#f59e0b",
+  "lightColor": "#fccf76",
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "account-setup"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/how-it-works",
+              "concepts/knowledge-base",
+              "concepts/ai-assistant",
+              "concepts/analytics"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/uploading-documents",
+              "guides/training-your-bot",
+              "guides/embed-chat-widget",
+              "guides/managing-multiple-bots",
+              "guides/customizing-appearance"
+            ]
+          },
+          {
+            "group": "Plans & Billing",
+            "pages": [
+              "billing/plans",
+              "billing/managing-subscription"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "help/faq",
+              "help/troubleshooting",
+              "help/contact-support"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "RAG-powered document ingestion and question answering",
+    "Embeddable chat widget for websites",
+    "Support for PDFs, contracts, policies, and knowledge bases",
+    "Real-time analytics dashboard (conversations, accuracy, engagement)",
+    "Multi-bot management with seat-based team collaboration",
+    "End-to-end encryption with no model training on customer data",
+    "OAuth sign-in via Google and Microsoft",
+    "DDoS protection, rate limiting, and domain-level authorization"
+  ],
+  "publicApiSurface": [
+    "Document upload (PDF, Word, text files — up to 5,000 pages per bot)",
+    "Chat widget embed script",
+    "Analytics dashboard",
+    "Bot configuration and appearance customization",
+    "Team seat management",
+    "Subscription management (Starter / Growth / Scale plans)"
+  ]
+}
